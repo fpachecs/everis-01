@@ -1,4 +1,4 @@
-package controller.ejemplo.com;
+package com.everis.controller;
 
 import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;
@@ -13,6 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 /**
  * Handles requests for the application home page.
  */
+@SuppressWarnings("unused")
 @Controller
 public class HomeController {
 	

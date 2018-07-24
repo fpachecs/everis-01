@@ -16,6 +16,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
+import model.com.ejemplo.Login;
+
 
 
 
@@ -37,12 +39,12 @@ public class ApplicationContextConfig {
 		//registry.addResourceHandler("/css/**").addResourceLocations("/static/css/");	    
 	}
      
-    /**
+
     @Bean(name = "dataSource")
     public DataSource getDataSource() {
     	BasicDataSource dataSource = new BasicDataSource();
     	dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-    	dataSource.setUrl("jdbc:mysql://localhost:3306/supermercado");
+    	dataSource.setUrl("jdbc:mysql://localhost:3306/banco");
     	dataSource.setUsername("root");
     	dataSource.setPassword("1111");
     	
@@ -62,7 +64,7 @@ public class ApplicationContextConfig {
     public SessionFactory getSessionFactory(DataSource dataSource) {
     	LocalSessionFactoryBuilder sessionBuilder = new LocalSessionFactoryBuilder(dataSource);
     	sessionBuilder.addProperties(getHibernateProperties());
-    	sessionBuilder.addAnnotatedClasses(Super.class); 	
+    	sessionBuilder.addAnnotatedClasses(Login.class); 	
     	return sessionBuilder.buildSessionFactory();
     }
     
@@ -75,6 +77,6 @@ public class ApplicationContextConfig {
 
 		return transactionManager;
 	}
-    */
+    
 
 }

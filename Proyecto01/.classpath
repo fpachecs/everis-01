@@ -75,5 +75,6 @@
 			<attribute name="maven.scope" value="provided"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="C:/Users/mdiazfer/Desktop/javax.persistence.jar.zip"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

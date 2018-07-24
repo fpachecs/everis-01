@@ -1,0 +1,37 @@
+
+body{
+ color:black;
+ background-color: 	#00FF7F;
+  
+}
+
+img#logo{
+  width: 200px;
+  padding-left: 200px;
+}
+div{
+  
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 100px;
+  margin-left: 400px;
+  background-image: url('https://image.freepik.com/vector-gratis/hoja-de-papel-con-cuadricula_23-2147502420.jpg');
+  background-repeat: no-repeat;
+  background-size: 280px 260px;
+  background-position: 150px 10px; 
+  
+}
+input#login{
+  width: 250px;
+  margin-top: 20px;
+ margin-left: 170px;
+}
+input#password{
+  width: 250px;
+  margin-top: 20px;
+ margin-left: 170px;
+}
+input#entrar{
+  margin-top: 30px;
+ margin-left: 265px;
+}
