@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>LogIn</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
+<body>
+	<header>
+		<div style="position:relative;">
+			<img alt="icono" src="C:/Users/odepazch/eclipse-workspace/Project/images/logo_inversis.png" align="middle">
+		</div>
+		
+		<div style="position:absolute;top:10px;right:10px; z-index:999" >
+			<input class="botonLargo" name = "boton_registro" type="button" value="Registro"
+			onClick="window.location.href='registro.jsp'"/>
+		</div>
+		
+	</header>
+	
+	<div class="main">
+		<p>Introduce tus datos:</p>	
+		
+		<form action="Acceso" method="post">
+			<div class="opcionesRadio otraClase">
+			
+				<span class="edit">User</span>
+				<input type="text" name="uname" required/>
+				
+				<br/><br/>
+				<span class="edit">Pass</span>
+				<input type="password"	name="pass" required/>	
+			</div>
+			
+			<div class="formFooter">
+				<input class="botonLargo" name= "boton_acceder" type="submit" value="Acceder"/>
+			</div>
+		</form>
+	</div>
+	
+	<script src="js/functions.js"></script>
+</body>
+</html>
