@@ -25,19 +25,19 @@
 			<div class="opcionesRadio otraClase">
 	
 				<span class="edit">Nombre</span>
-				<input type="text"	name="nombre" pattern="[A-Za-zÁÉÍÓÚáéíóú ]*" required/>
+				<input type="text"	name="nombre" pattern="[A-Za-zÁÉÍÓÚáéíóú ]*" oninvalid="setCustomValidity('Este campo no acepta números ni caracteres especiales')" onchange="try{setCustomValidity('')}catch(e){}"/>
 					
 				<br/><br/>
 				<span class="edit">Apellido</span>
-				<input type="text"	name="apellido" pattern="[A-Za-zÁÉÍÓÚáéíóú ]*" required/>
+				<input type="text"	name="apellido" pattern="[A-Za-zÁÉÍÓÚáéíóú ]*" oninvalid="setCustomValidity('Este campo no acepta números ni caracteres especiales')" onchange="try{setCustomValidity('')}catch(e){}" required/>
 					
 				<br/><br/>
 				<span class="edit">DNI</span>
-				<input type="text"	name="dni" pattern="[0-9]{8}[A-Z]{1}" required/>
+				<input type="text"	name="dni" pattern="[0-9]{8}[A-Z]{1}" oninvalid="setCustomValidity('Este campo debe ser de la forma 00000000X')" onchange="try{setCustomValidity('')}catch(e){}" required/>
 					
 				<br/><br/>
 				<span class="edit">User</span>
-				<input type="text" name="uname" pattern="[A-Za-z0-9]*" required/>
+				<input type="text" name="uname" pattern="[A-Za-z0-9]*" oninvalid="setCustomValidity('Este campo no acepta caracteres especiales')" onchange="try{setCustomValidity('')}catch(e){}" required/>
 					
 				<br/><br/>
 				<span class="edit">Pass</span>

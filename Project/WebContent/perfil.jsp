@@ -53,19 +53,19 @@
 					<p>Nombre:</p>
 				</div>
 				<div class="tablaDato">
-					<b><input type="text" name="nombre" value="${sessionScope.usuario.nombre}" pattern="[A-Za-zÁÉÍÓÚáéíóú ]*" required></b>
+					<b><input type="text" name="nombre" value="${sessionScope.usuario.nombre}" pattern="[A-Za-zÁÉÍÓÚáéíóú ]*" oninvalid="setCustomValidity('Este campo no acepta números ni caracteres especiales')" onchange="try{setCustomValidity('')}catch(e){}" required></b>
 				</div>
 				<div class="tablaTitulo">
 					<p>Apellido:</p>
 				</div>
 				<div class="tablaDato">
-					<b><input type="text" name="apellido" value="${sessionScope.usuario.apellido}" pattern="[A-Za-zÁÉÍÓÚáéíóú ]*" required></b>
+					<b><input type="text" name="apellido" value="${sessionScope.usuario.apellido}" pattern="[A-Za-zÁÉÍÓÚáéíóú ]*" oninvalid="setCustomValidity('Este campo no acepta números ni caracteres especiales')" onchange="try{setCustomValidity('')}catch(e){}" required></b>
 				</div>
 				<div class="tablaTitulo">
 					<p>DNI:</p>
 				</div>
 				<div class="tablaDato">
-				<b><input type="text" name="dni" value="${sessionScope.usuario.dni}" pattern="[0-9]{8}[A-Z]{1}" required></b>
+				<b><input type="text" name="dni" value="${sessionScope.usuario.dni}" pattern="[0-9]{8}[A-Z]{1}" oninvalid="setCustomValidity('Este campo debe ser de la forma 00000000X')" onchange="try{setCustomValidity('')}catch(e){}" required></b>
 				</div>
 				<div class="tablaTitulo">
 					<p>Último acceso:</p>
