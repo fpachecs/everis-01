@@ -25,24 +25,23 @@
 			<div class="opcionesRadio otraClase">
 	
 				<span class="edit">Nombre</span>
-				<input type="text"	name="nombre" pattern="[A-Za-z]" required/>
+				<input type="text"	name="nombre" pattern="[A-Za-zÁÉÍÓÚáéíóú ]*" required/>
 					
 				<br/><br/>
 				<span class="edit">Apellido</span>
-				<input type="text"	name="apellido" pattern="[A-Za-z]" required/>
+				<input type="text"	name="apellido" pattern="[A-Za-zÁÉÍÓÚáéíóú ]*" required/>
 					
 				<br/><br/>
 				<span class="edit">DNI</span>
-				<input type="text"	name="dni" required/>
+				<input type="text"	name="dni" pattern="[0-9]{8}[A-Z]{1}" required/>
 					
 				<br/><br/>
 				<span class="edit">User</span>
-				<input type="text" name="uname" required/>
+				<input type="text" name="uname" pattern="[A-Za-z0-9]*" required/>
 					
 				<br/><br/>
 				<span class="edit">Pass</span>
 				<input type="password"	name="pass" required/>	
-					
 			</div>
 			
 			<div class="formFooter">

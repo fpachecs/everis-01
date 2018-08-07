@@ -53,19 +53,19 @@
 					<p>Nombre:</p>
 				</div>
 				<div class="tablaDato">
-					<b><input type="text" name="nombre" value="${sessionScope.usuario.nombre}" required></b>
+					<b><input type="text" name="nombre" value="${sessionScope.usuario.nombre}" pattern="[A-Za-zÁÉÍÓÚáéíóú ]*" required></b>
 				</div>
 				<div class="tablaTitulo">
 					<p>Apellido:</p>
 				</div>
 				<div class="tablaDato">
-					<b><input type="text" name="apellido" value="${sessionScope.usuario.apellido}" required></b>
+					<b><input type="text" name="apellido" value="${sessionScope.usuario.apellido}" pattern="[A-Za-zÁÉÍÓÚáéíóú ]*" required></b>
 				</div>
 				<div class="tablaTitulo">
 					<p>DNI:</p>
 				</div>
 				<div class="tablaDato">
-				<b><input type="text" name="dni" value="${sessionScope.usuario.dni}" required></b>
+				<b><input type="text" name="dni" value="${sessionScope.usuario.dni}" pattern="[0-9]{8}[A-Z]{1}" required></b>
 				</div>
 				<div class="tablaTitulo">
 					<p>Último acceso:</p>
