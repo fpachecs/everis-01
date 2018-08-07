@@ -16,7 +16,7 @@
 	<header>
 		
 		<div style="position:relative;bottom:20px;left:30px;" >
-   			<img src="C:/Users/odepazch/eclipse-workspace/Project/images/logo_inversis.png" align="left">
+   			<img src="C:\Users\odepazch\git\everis-01\Project\images\logo_inversis.png" align="left">
 		</div>
 		
 		<% HttpSession sesion = request.getSession();

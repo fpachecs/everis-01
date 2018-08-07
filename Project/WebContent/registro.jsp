@@ -15,7 +15,7 @@
 <body>
 
 	<header>
-		<img alt="icono" src="C:/Users/odepazch/eclipse-workspace/Project/images/logo_inversis.png" align="middle">
+		<img alt="icono" src="C:\Users\odepazch\git\everis-01\Project\images\logo_inversis.png" align="middle">
 	</header>
 	
 	<div class="main">
