@@ -32,6 +32,7 @@
 			<form action="OperacionesCuenta" method="post">
 				<select name="item" onchange="this.form.submit()">
 						<option>Operaciones</option>
+						<option value="VerMovimientos">Ver Movimientos </option>
             			<option value="Ingresar">Ingresar</option>
            				<option value="Extraer">Extraer</option>
         		</select>
