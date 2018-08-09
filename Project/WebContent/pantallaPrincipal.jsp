@@ -43,18 +43,25 @@
 		<div class="opcionesRadio otraClase">
 		
 			<% 	@SuppressWarnings("unchecked")
-				ArrayList<Cuenta> listaCuentas = (ArrayList<Cuenta>)sesion.getAttribute("listaCuentas"); %>
+				ArrayList<Cuenta> listaCuentas = (ArrayList<Cuenta>)sesion.getAttribute("listaCuentas"); 
+			
+				for (int i = 0; i < listaCuentas.size(); i++) {
+						
+					String aux = listaCuentas.get(i).getNumCuenta();
+					String aux2 = "numCuenta" + aux;
+					String aux3 = "saldo" + aux;
+					String aux4 = "idCuentaMovimiento" + aux;
+					sesion.setAttribute(aux2, listaCuentas.get(i).getNumCuenta());
+					sesion.setAttribute(aux3, listaCuentas.get(i).getSaldo());
+					sesion.setAttribute(aux4, listaCuentas.get(i).getId());
+				}
+			
+			%>
 				
 				<c:forEach var="item" items="${sessionScope.listaCuentas}">
-				
-					<% 	int i = 0;
-						session.setAttribute("numCuenta", listaCuentas.get(i).getNumCuenta());
-						session.setAttribute("saldo", listaCuentas.get(i).getSaldo());
-						session.setAttribute("idCuentaMovimiento", listaCuentas.get(i).getId());
-						i++; %>
-						
+
 					<div class="tablaTitulo">
-						<a href = "gestionCuenta.jsp"> <b>${item.numCuenta}</b></a>&nbsp; | &nbsp;<b>${item.saldo}</b> Euros
+						<a href = "gestionCuenta.jsp?nc=${item.numCuenta}"> <b>${item.numCuenta}</b></a>&nbsp; | &nbsp;<b>${item.saldo}</b> Euros
 					</div>
 					<br></br>
 				</c:forEach>

@@ -48,13 +48,13 @@
 	</header>
 	
 	<div class="main">
-		<p>Movimientos de la cuenta:</p>
+		<p>Extraer:</p>
 		
 		<form action="IngresarExtraer" method="post">
 			<div class="opcionesRadio otraClase">
 		
 				<div class="tablaTitulo">
-					<b><%= sesion.getAttribute("numCuenta") %></b>&nbsp; | &nbsp;<b><%= sesion.getAttribute("saldo") %></b> Euros
+					<b><%= sesion.getAttribute("numCuenta" + sesion.getAttribute("nc")) %></b>&nbsp; | &nbsp;<b><%= sesion.getAttribute("saldo" + sesion.getAttribute("nc")) %></b> Euros
 				</div>
 				<br></br>
 				

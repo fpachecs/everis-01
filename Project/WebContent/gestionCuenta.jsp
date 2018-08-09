@@ -48,8 +48,11 @@
 		
 	</header>
 	
-	<%	sesion.getAttribute("numCuenta");
-		sesion.getAttribute("saldo"); %>
+	<%	
+		if (request.getParameter("nc") != null) {
+			sesion.setAttribute("nc", request.getParameter("nc"));
+		}
+	%>
 	
 	<div class="main">
 		<p>Información de cuenta:</p>	
@@ -58,13 +61,13 @@
 			<p>Cuenta:</p>
 		</div>
 		<div class="tablaDato">
-			<b>${numCuenta}</b>
+			<b><%= sesion.getAttribute("numCuenta" + sesion.getAttribute("nc")) %></b>
 		</div>
 		<div class="tablaTitulo">
 			<p>Saldo:</p>
 		</div>
 		<div class="tablaDato">
-			<b>${saldo}</b>
+			<b><%= sesion.getAttribute("saldo" + sesion.getAttribute("nc")) %></b>
 		</div>
 		<div>
 			<input class="botonMedio" type="submit" value="Volver" 

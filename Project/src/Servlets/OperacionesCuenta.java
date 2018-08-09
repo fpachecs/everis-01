@@ -27,7 +27,8 @@ public class OperacionesCuenta extends HttpServlet {
 
 		//Obtenemos la sesión y los datos que necesitamos de ella
 		HttpSession sesion = request.getSession();
-		Object idCuenta = sesion.getAttribute("idCuentaMovimiento");
+		String nc = (String) sesion.getAttribute("nc");
+		Object idCuenta = sesion.getAttribute("idCuentaMovimiento" + nc);
 		Integer idC = (Integer) idCuenta;
 
 		synchronized (sesion) {
