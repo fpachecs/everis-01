@@ -27,7 +27,8 @@ public class IngresarExtraer extends HttpServlet {
 		
 		//Obtenemos la sesión y los atributos que necesitamos de ella
 		HttpSession sesion = request.getSession();
-		Object id = sesion.getAttribute("idCuentaMovimiento");
+		String nc = (String) sesion.getAttribute("nc");
+		Object id = sesion.getAttribute("idCuentaMovimiento" + nc);
 		Integer idCuenta = (Integer) id;
 		@SuppressWarnings("unchecked")
 		ArrayList<Cuenta> listaCuentas = (ArrayList<Cuenta>) sesion.getAttribute("listaCuentas");
@@ -42,7 +43,7 @@ public class IngresarExtraer extends HttpServlet {
 			
 			GestionIngresarExtraer gie = new GestionIngresarExtraer();
 			float saldo = gie.IngresoExtraccion(idCuenta, cantidad, tipoOperacion);
-			sesion.setAttribute("saldo", saldo);
+			sesion.setAttribute("saldo" + nc, saldo);
 			
 			while(listaCuentas.get(contador).getId() != idCuenta) {
 				contador++;
